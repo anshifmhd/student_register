@@ -1,0 +1,13 @@
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="modal-body">
+        name: <input type="text" value="{{updates.name}}" name="name" id=""><br>
+        place: <input type="text" value="{{updates.place}}" name="place" id=""><br>
+        email: <input type="text" value="{{updates.email}}" name="email" id=""><br>
+        contact: <input type="text" value="{{updates.contact}}" name="contact" id=""><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <input type="submit" value="Update" class="btn btn-primary" name="" id="">
+      </div>
+</form>

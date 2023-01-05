@@ -1,0 +1,59 @@
+{% extends 'index_admin.html' %}
+{% block content %}
+
+
+<style>
+    button {
+        background-color: red;
+    }
+</style>
+
+<div class="body" align="center">
+    <br><br><br><br>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <table border="2px solid black">
+        <tr>
+            <th>NAME</th>
+            <th>PLACE</th>
+            <th>EMAIL</th>
+            <th>CONTACT</th>
+            <th>DEPARTMENT</th>
+
+        </tr>
+        {% for d in students %}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.place}}</td>
+            <td>{{d.email}}</td>
+            <td>{{d.contact}}</td>
+            <td>{{d.department.department}}</td>
+            <td><a href="{% url 'admin:update' d.id %}"><button>Update</button></a></td>
+            <td><button>Delete</button></td>
+
+        </tr>
+
+
+
+
+
+        {% endfor %}
+    </table>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

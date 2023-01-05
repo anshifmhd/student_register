@@ -1,0 +1,27 @@
+{% extends 'index_admin.html' %}
+{% block content %}
+
+
+
+<div class="body">
+    <div class="row" >
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4" align="center">
+            <h1>login</h1>
+            <hr>
+           <form action="" method="POST">
+            {% csrf_token %}
+            <div class="row" >
+                <input type="text" name="dep" id="username" placeholder="add department">
+            </div>
+            <div class="row"><input type="submit" name="submit" id="submit" value="add"></div>
+           </form>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
